@@ -1,0 +1,133 @@
+Q1 What are the primitive data types in C language?
+Ans. The primitive data types in C language are:
+
+1. int: Used to store integer values.
+2. float: Used to store floating-point numbers (real numbers).
+3. double: Used to store double-precision floating-point numbers with higher precision than float.
+4. char: Used to store single characters.
+5. _Bool: Used to store boolean values (true or false).
+6. void: Represents an empty or no value.
+
+In addition to these, C language provides modifiers such as signed, unsigned, short, and long that can be combined with these data types to modify their range or size.
+
+
+
+
+
+Q2 What kind of statements can be written outside a function body?
+Ans. In C language, only declaration statements can be written outside the function body. These statements define variables and their types but do not include executable code.
+
+For example:
+
+```c
+int x;  // Variable declaration statement
+
+float calculateArea(float radius);  // Function prototype declaration statement
+```
+
+Other types of statements, such as assignment statements, control flow statements (if, switch, loops), and function definitions, must be written inside a function body. These statements contain executable code that performs specific operations or controls the flow of the program.
+
+
+
+
+
+Q3 What is the size of a float type variable?
+Ans. In most implementations of the C language, the size of a float type variable is typically 4 bytes or 32 bits. The float data type is used to represent single-precision floating-point numbers, which have a limited precision and a range of values. The 32 bits are used to store the sign, exponent, and fraction components of the floating-point number, allowing for a certain level of precision in representing decimal numbers.
+
+
+
+
+
+Q4 What is the value of an uninitialized variable?
+Ans. The value of an uninitialized variable in C language is undefined. When a variable is declared but not explicitly assigned a value, its contents are indeterminate and can contain any arbitrary value present in the memory location allocated for that variable. 
+
+The actual value of an uninitialized variable is dependent on factors such as the compiler, the optimization level, and the current state of the memory. Therefore, relying on the value of an uninitialized variable leads to unpredictable behavior and can result in bugs or erroneous program execution.
+
+To ensure predictable and correct behavior, it is good practice to always initialize variables with a value before using them in your program.
+
+
+
+
+
+Q5 What is the difference between float and double?
+Ans. The main difference between float and double in C language lies in their precision and storage size.
+
+1. Precision: The float data type represents single-precision floating-point numbers, while double represents double-precision floating-point numbers. The float type typically provides a precision of around 6 decimal places, while the double type offers a higher precision of around 15 decimal places. This means that double can represent more precise and accurate decimal values compared to float.
+
+2. Storage Size: The float data type typically occupies 4 bytes (32 bits) of memory, while the double data type occupies 8 bytes (64 bits). This means that double requires twice as much memory as float to store its values. The increased storage size allows double to represent a wider range of values and provides more precision.
+
+In summary, double provides higher precision and a wider range of representable values compared to float, but it also requires more memory. The choice between using float or double depends on the specific requirements of your program, balancing the need for precision with memory usage.
+
+
+
+
+
+Q6 What is the full form of ASCII?
+Ans. American Standard Code for Information Interchange
+
+
+
+
+
+Q7 What is the difference between a keyword and a function?
+Ans. A keyword and a function are distinct elements in programming, serving different purposes:
+
+Keyword:
+- A keyword is a reserved word in a programming language that has a predefined meaning and is part of the language's syntax. 
+- Keywords are used to define the structure and behavior of programs, such as control flow (if, else, for, while), variable declaration (int, float, char), and function definition (void, return).
+- Keywords cannot be used as variable names or redefined by the programmer.
+
+Function:
+- A function is a named block of code that performs a specific task or computation.
+- Functions encapsulate a set of instructions and can be called (invoked) from various parts of a program to perform the defined task.
+- Functions can have parameters (input values) and return values (output values) to facilitate data exchange.
+- Functions can be defined by the programmer to implement specific operations or behaviors within a program.
+
+In summary, a keyword is a predefined word with a specific meaning in the programming language, while a function is a block of code that performs a specific task and can be invoked and used within a program. Keywords are part of the language syntax, whereas functions are defined by the programmer to provide reusable code and modularize program logic.
+
+
+
+
+
+Q8 Explore the use of type modifiers in C language.
+Ans. In the C language, type modifiers are keywords used to modify the properties of basic data types. These modifiers provide additional information about the size, range, and signedness of the variables. Here are some commonly used type modifiers in C:
+
+1. signed: This modifier is used to indicate that a variable can hold both positive and negative values. It is used with integer data types, such as int, short, and long. If no sign modifier is specified, the variable is assumed to be signed by default.
+
+2. unsigned: This modifier is used to indicate that a variable can hold only non-negative values. It is also used with integer data types. Unsigned variables can represent a larger positive range compared to signed variables of the same size.
+
+3. short: This modifier is used to reduce the size of an integer variable. It is typically used with the int data type. The short modifier reduces the storage size of the variable at the cost of a reduced range of representable values.
+
+4. long: This modifier is used to increase the size of an integer variable. It is typically used with the int data type. The long modifier increases the storage size of the variable, allowing for a wider range of representable values.
+
+These type modifiers can be used in combination with data types to create variables with specific properties. For example, you can have variables like unsigned int, signed short int, or long double, which provide specific ranges or storage sizes as per your requirements.
+
+
+
+
+
+Q9 Can you assign a character constant in an int variable?
+Ans. Yes, you can assign a character constant to an int variable in C. The C language allows implicit type conversion between character constants and integer variables. When you assign a character constant to an int variable, the ASCII value of the character is stored in the integer variable.
+
+For example:
+
+```c
+int num = 'A';
+```
+
+In the above code, the character constant 'A' is assigned to the integer variable num. Since the ASCII value of 'A' is 65, the variable num will hold the value 65.
+
+However, it's important to note that assigning a character constant to an int variable might result in loss of information if the character's ASCII value exceeds the range of representable integers. In such cases, it's recommended to use appropriate data types to ensure the integrity of the data.
+
+
+
+
+
+Q10 State the following statement is true or false? Every block of code is a function.
+Ans. The statement "Every block of code is a function" is false.
+
+In C programming, a block of code is a portion of code enclosed within curly braces `{}`. It is used to group multiple statements together and define a scope. However, a block of code is not necessarily a function.
+
+A function, on the other hand, is a named block of code that performs a specific task and can be called from other parts of the program. Functions have a distinct name, can accept parameters, and can return a value.
+
+While functions can contain blocks of code, not every block of code is a function. Blocks of code can exist within functions, conditionals (if-else statements), loops (for, while, do-while), and other program constructs.
